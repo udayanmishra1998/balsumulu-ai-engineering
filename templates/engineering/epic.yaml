@@ -1,0 +1,48 @@
+# Epic Template
+# Used by Engineering Planner to define epics in the backlog
+
+epic:
+  id: "EPIC-{number}"
+  title: "[{AREA}] {Epic Title}"
+  description: |
+    {What this epic delivers and why it matters to the user.
+    Should be understandable by a non-technical founder.}
+
+  # Traceability
+  features:
+    - "FEAT-{area}-{number}"  # PRD features this epic implements
+  requirements:
+    - "REQ-{area}-{number}"   # Requirements this epic fulfills
+  phase: "Phase 1"            # Roadmap phase
+
+  # Prioritization
+  priority: 1                 # Order within the phase (1 = highest)
+  priority_rationale: |
+    {Why this epic is at this priority — user value, dependencies, risk}
+  priority_framework: "RICE"  # Framework used (RICE / WSJF / MoSCoW)
+  priority_scores:
+    reach: null               # Number of users affected (RICE)
+    impact: null              # Impact per user: 3=massive, 2=high, 1=medium, 0.5=low (RICE)
+    confidence: null          # How sure: 100%=high, 80%=medium, 50%=low (RICE)
+    effort: null              # Person-months estimate (RICE)
+
+  # Acceptance Criteria (epic-level, from PRD)
+  acceptance_criteria:
+    - "{High-level AC pulled from PRD feature specification}"
+    - "{Another high-level AC}"
+
+  # Dependencies
+  dependencies:
+    - epic: "EPIC-{number}"
+      type: "blocks"          # blocks | soft-dependency
+      reason: "{Why this dependency exists}"
+
+  # Metadata
+  labels:
+    - "{capability-area}"
+    - "{persona}"
+  estimated_stories: null     # Filled after decomposition
+  status: "backlog"           # backlog | in-progress | done
+
+  # Stories (populated during decomposition)
+  stories: []

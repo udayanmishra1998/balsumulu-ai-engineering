@@ -1,0 +1,81 @@
+# User Story Template
+# Used by Engineering Planner to create groomed stories in the backlog
+
+story:
+  id: "STORY-{epic_number}-{story_number}"
+  title: "{Action-oriented title — what the user does}"
+
+  # Narrative
+  persona: "{persona-name}"
+  narrative: |
+    As a {persona},
+    I want to {action/capability},
+    So that {benefit/value}.
+
+  description: |
+    {Additional context, design notes, constraints, or technical hints
+    that help the developer understand what's needed.
+    Keep it concise — the ACs are the contract.}
+
+  # Traceability
+  epic: "EPIC-{number}"
+  features:
+    - "FEAT-{area}-{number}"
+  requirements:
+    - "REQ-{area}-{number}"
+
+  # Acceptance Criteria
+  acceptance_criteria:
+    - id: "AC-STORY-{epic}-{story}-01"
+      type: "happy-path"       # happy-path | edge-case | error
+      given: "{Precondition or initial state}"
+      when: "{User action or system event}"
+      then: "{Expected outcome — specific and measurable}"
+      priority: "must-pass"    # must-pass | should-pass
+
+    - id: "AC-STORY-{epic}-{story}-02"
+      type: "edge-case"
+      given: "{Precondition}"
+      when: "{Unusual but valid action}"
+      then: "{Expected behavior}"
+      priority: "must-pass"
+
+    - id: "AC-STORY-{epic}-{story}-03"
+      type: "error"
+      given: "{Precondition}"
+      when: "{Invalid action or system failure}"
+      then: "{Error handling behavior}"
+      priority: "must-pass"
+
+  # Edge Cases
+  edge_cases:
+    - scenario: "{Description of edge case}"
+      expected: "{What should happen}"
+
+  # Boundaries
+  out_of_scope:
+    - "{What this story explicitly does NOT include}"
+
+  # Dependencies
+  dependencies:
+    - story: "STORY-{epic}-{number}"
+      type: "blocks"           # blocks | soft-dependency
+      reason: "{Why}"
+
+  # INVEST Validation (filled by Engineering Planner)
+  invest:
+    independent: true          # Can be developed without other stories in same sprint
+    negotiable: true           # Details can be discussed
+    valuable: true             # Delivers user/system value
+    estimable: true            # Developer can estimate effort
+    small: true                # Completable in one sprint
+    testable: true             # ACs are clear and testable
+
+  # Metadata
+  priority: "must"             # must | should | could
+  labels:
+    - "{epic-label}"
+    - "{capability-area}"
+    - "{persona}"
+  status: "backlog"            # backlog | ready | in-progress | review | done
+  estimation: null             # To be filled by architect/developer

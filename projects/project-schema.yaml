@@ -1,0 +1,52 @@
+# Project Schema — defines the structure of a project.yaml file
+# Each project under projects/<name>/ should have a project.yaml following this schema.
+
+schema:
+  project_name:
+    type: string
+    required: true
+    description: Human-readable project name
+
+  status:
+    type: string
+    required: true
+    enum: [active, paused, completed, archived]
+
+  current_phase:
+    type: string
+    required: true
+    enum: [discovery, requirements, specification, planning, architecture, implementation, testing, release, operations]
+
+  integrations:
+    type: object
+    required: true
+    properties:
+      documentation:
+        type: string
+        enum: [notion, confluence]
+      backlog:
+        type: string
+        enum: [jira, linear, notion]
+      code:
+        type: string
+        enum: [github]
+
+  tech_stack:
+    type: object
+    properties:
+      backend:
+        type: string
+        enum: [java-spring, python-fastapi, node-express, node-nestjs]
+      frontend:
+        type: string
+        enum: [react, angular, nextjs]
+      database:
+        type: string
+
+  created_at:
+    type: string
+    format: date
+
+  updated_at:
+    type: string
+    format: date

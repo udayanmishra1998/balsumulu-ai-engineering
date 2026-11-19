@@ -1,0 +1,203 @@
+# Product Requirements Document — {{project_name}}
+
+> **Status:** {{status: draft | review | approved}}
+> **Version:** {{version}}
+> **Date:** {{date}}
+> **Agent:** PRD Agent
+> **Phase:** Specification
+> **Requirements Doc:** {{link}}
+
+---
+
+## 1. Overview
+
+### 1.1 Product Vision
+{{Link to approved product vision}}
+
+### 1.2 Problem Statement
+{{Clear, concise description of the problem}}
+
+### 1.3 Target Users
+| Persona | Priority | Link |
+|---|---|---|
+| {{persona_1}} | Primary | {{link}} |
+| {{persona_2}} | Secondary | {{link}} |
+
+### 1.4 Success Metrics
+| Metric | Target | Timeframe |
+|---|---|---|
+| {{metric_1}} | {{target}} | {{timeframe}} |
+
+### 1.5 Scope
+**MVP includes:** {{summary of what's in}}
+**Explicitly excluded:** {{summary of what's out}}
+
+---
+
+## 2. User Personas
+
+{{Link to detailed persona documents in Notion/Confluence}}
+
+---
+
+## 3. Feature Specifications
+
+### 3.1 Feature: {{Feature Name}}
+
+**ID:** FEAT-{{area}}-{{number}}
+**Linked Requirements:** REQ-{{area}}-{{number}}
+**Priority:** Must / Should / Could
+**Personas:** {{persona_1}}, {{persona_2}}
+
+#### Problem It Solves
+{{What user problem does this feature address?}}
+
+#### User Stories (High-Level)
+- As a {{persona}}, I want to {{action}}, so that {{benefit}}
+- As a {{persona}}, I want to {{action}}, so that {{benefit}}
+
+#### Functional Description
+{{Step-by-step description of what the feature does}}
+
+1. {{Step 1}}
+2. {{Step 2}}
+3. {{Step 3}}
+
+#### User Interaction Flow
+```
+[Entry Point] → [Step 1] → [Step 2] → [Outcome]
+                    ↓ (error)
+               [Error State] → [Recovery]
+```
+
+#### Edge Cases
+| Scenario | Expected Behavior |
+|---|---|
+| {{edge case 1}} | {{what happens}} |
+| {{edge case 2}} | {{what happens}} |
+
+#### Error Handling
+| Error Condition | User Sees | System Does |
+|---|---|---|
+| {{error 1}} | {{message/behavior}} | {{logging/retry/fallback}} |
+
+#### Acceptance Criteria
+
+| ID | Type | Given | When | Then | Priority |
+|---|---|---|---|---|---|
+| AC-FEAT-{{id}}-01 | Happy path | {{precondition}} | {{action}} | {{result}} | Must-pass |
+| AC-FEAT-{{id}}-02 | Edge case | {{precondition}} | {{action}} | {{result}} | Must-pass |
+| AC-FEAT-{{id}}-03 | Error | {{precondition}} | {{action}} | {{result}} | Must-pass |
+
+#### Dependencies
+- {{Depends on FEAT-XXX-NNN / external system / data}}
+
+#### Out of Scope
+- {{What this feature explicitly does NOT do}}
+
+---
+
+> Repeat Section 3.N for each feature
+
+---
+
+## 4. Non-Functional Requirements
+
+### 4.1 Performance
+| Requirement | Target | Measurement Method |
+|---|---|---|
+| Page load time | < {{N}} seconds | Lighthouse / Web Vitals |
+| API response time | < {{N}} ms (p95) | APM tooling |
+| Concurrent users | {{N}} simultaneous | Load testing |
+
+### 4.2 Security
+| Requirement | Specification |
+|---|---|
+| Authentication | {{method: OAuth2 / JWT / etc.}} |
+| Authorization | {{model: RBAC / ABAC / etc.}} |
+| Data encryption | {{at rest: AES-256, in transit: TLS 1.3}} |
+| PII handling | {{approach}} |
+
+### 4.3 Scalability
+| Requirement | Specification |
+|---|---|
+| Expected user growth | {{N users in N months}} |
+| Data volume | {{expected data growth}} |
+| Scaling strategy | {{horizontal / vertical / auto}} |
+
+### 4.4 Availability
+| Requirement | Target |
+|---|---|
+| Uptime | {{99.9% / 99.99%}} |
+| Recovery Time Objective (RTO) | {{N hours}} |
+| Recovery Point Objective (RPO) | {{N hours}} |
+
+### 4.5 Accessibility
+| Requirement | Target |
+|---|---|
+| WCAG Level | {{AA / AAA}} |
+| Screen reader support | {{yes/no}} |
+| Keyboard navigation | {{full / partial}} |
+
+### 4.6 Data Requirements
+| Data Entity | Source | Sensitivity | Retention |
+|---|---|---|---|
+| {{entity}} | {{source}} | {{PII/confidential/public}} | {{duration}} |
+
+---
+
+## 5. Integration Requirements
+
+### 5.1 {{System Name}}
+| Aspect | Specification |
+|---|---|
+| **Purpose** | {{why we integrate}} |
+| **Data flow** | {{what data, which direction}} |
+| **Authentication** | {{API key / OAuth / webhook}} |
+| **Error handling** | {{retry / fallback / alert}} |
+| **Rate limits** | {{limits and how we handle them}} |
+
+---
+
+## 6. Constraints and Assumptions
+
+### Constraints
+| ID | Constraint | Type | Impact |
+|---|---|---|---|
+| CON-001 | {{constraint}} | {{type}} | {{impact on design}} |
+
+### Assumptions
+| ID | Assumption | Risk if Wrong | Validation |
+|---|---|---|---|
+| ASM-001 | {{assumption}} | {{what breaks}} | {{how to validate}} |
+
+---
+
+## 7. Open Questions
+
+| # | Question | Owner | Impact | Status |
+|---|---|---|---|---|
+| 1 | {{question}} | {{who answers}} | {{what's blocked}} | Open / Resolved |
+
+---
+
+## 8. Appendix
+
+### Glossary
+| Term | Definition |
+|---|---|
+| {{term}} | {{definition}} |
+
+### References
+- Requirements Document: {{link}}
+- Research Findings: {{link}}
+- Product Vision: {{link}}
+
+### Version History
+| Version | Date | Changes | Approved By |
+|---|---|---|---|
+| 0.1 | {{date}} | Initial draft | — |
+| 1.0 | {{date}} | Approved | Founder |
+
+---
+*Generated by Balsumulu AI Engineering Harness — Specification Phase*
